@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class FileAccessor
 {
-    private const int Padding = 1;
-    private int _cols;
+    private const int Padding = 2;
     private bool _isInitialized;
     private int[,] _numbers;
-
+    
+    private int _cols;
     private int _rows;
 
     /// <summary>

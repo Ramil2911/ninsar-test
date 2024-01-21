@@ -864,6 +864,7 @@ GameObject:
   - component: {fileID: 1694203432}
   - component: {fileID: 1694203431}
   - component: {fileID: 1694203430}
+  - component: {fileID: 1694203433}
   m_Layer: 5
   m_Name: LoadField
   m_TagString: Untagged
@@ -1036,6 +1037,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1694203428}
   m_CullTransparentMesh: 0
+--- !u!114 &1694203433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694203428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96879d7e899974e4289245e5d343ab45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 1694203430}
+  blocksController: {fileID: 1711862564}
 --- !u!1 &1711862563
 GameObject:
   m_ObjectHideFlags: 0

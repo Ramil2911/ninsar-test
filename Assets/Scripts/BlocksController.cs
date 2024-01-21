@@ -15,6 +15,8 @@ public class BlocksController : MonoBehaviour
     private Renderer[,] _blocks;
     private string _path = "";
     private bool _updateFlag;
+    
+    private const int Padding = 2;
 
     // Start is called before the first frame update
     private void Start()
@@ -37,25 +39,25 @@ public class BlocksController : MonoBehaviour
         //Inputs section (i dont like it but importing new input system is too much)
         if (Input.GetKeyDown(KeyCode.W))
         {
-            x = Mathf.Clamp(x - 1, 0, rows - 1);
+            x = Mathf.Clamp(x - 1, 1-Padding, rows+2-Padding);
             _updateFlag = true;
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
-            x = Mathf.Clamp(x + 1, 0, rows - 1);
+            x = Mathf.Clamp(x + 1, 1-Padding, rows+2-Padding);
             _updateFlag = true;
         }
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            y = Mathf.Clamp(y - 1, 0, cols - 1);
+            y = Mathf.Clamp(y - 1, 1-Padding, cols+2-Padding);
             _updateFlag = true;
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
-            y = Mathf.Clamp(y + 1, 0, cols - 1);
+            y = Mathf.Clamp(y + 1, 1-Padding, cols+2-Padding);
             _updateFlag = true;
         }
 
@@ -93,8 +95,8 @@ public class BlocksController : MonoBehaviour
 
                 var (rows, cols) = _accessor.Size;
                 var rnd = new Random();
-                x = rnd.Next(0, rows);
-                y = rnd.Next(0, cols);
+                x = rnd.Next(1-Padding, rows+2-Padding);
+                y = rnd.Next(1-Padding, cols+2-Padding);
             }
         );
     }
